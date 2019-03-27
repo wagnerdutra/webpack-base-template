@@ -4,6 +4,4 @@ Template base para webpack.
 
 TODO
 
-- Adicionar arquivos do webpack para pasta build.
-- Configurar Redux e Redux Saga
 - Criar Testes iniciais
