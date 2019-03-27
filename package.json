@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "start": "webpack-dev-server --config build/webpack.dev.js"
+    "start": "webpack-dev-server --inline --progress --config build/webpack.dev.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -16,6 +16,7 @@
     "react-router-dom": "^5.0.0",
     "redux": "^4.0.1",
     "redux-saga": "^1.0.2",
+    "regenerator-runtime": "^0.13.2",
     "styled-components": "^4.2.0"
   },
   "devDependencies": {

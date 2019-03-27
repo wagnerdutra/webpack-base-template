@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import HelloComponent from '../components/HelloComponent';
+import Welcome from '../pages/welcome';
 
 const routes = () => (
   <Switch>
-    <Route path="/" component={HelloComponent} exact />
+    <Route path="/" component={Welcome} exact />
   </Switch>
 );
 

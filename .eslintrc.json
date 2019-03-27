@@ -21,6 +21,9 @@
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-underscore-dangle": 0,
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "react/destructuring-assignment": 0,
+    "import/prefer-default-export": 0,
+    "no-unused-vars": 1
   }
 }
