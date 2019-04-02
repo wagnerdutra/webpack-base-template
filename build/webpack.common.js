@@ -22,5 +22,13 @@ module.exports = {
       }
     ]
   },
-  plugins: [new webpack.ProgressPlugin()]
+  plugins: [new webpack.ProgressPlugin()],
+  resolve: {
+    alias: {
+      Components: path.resolve(__dirname, '../src/components/'),
+      Services: path.resolve(__dirname, '../src/services/'),
+      Store: path.resolve(__dirname, '../src/store/'),
+      Root: path.resolve(__dirname, '../src/')
+    }
+  }
 };

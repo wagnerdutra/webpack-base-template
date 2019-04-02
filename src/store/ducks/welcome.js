@@ -5,7 +5,7 @@ export const Types = {
   SET_USER_FAILURE: 'welcome/SET_USER_FAILURE'
 };
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   text: '',
   loading: false,
   userName: '',

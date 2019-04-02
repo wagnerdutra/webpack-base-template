@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
+import HelloComponent from 'Components/HelloComponent'; //eslint-disable-line
+
 import PropTypes from 'prop-types';
 
 import { Creators as WelcomeActions } from '../../store/ducks/welcome';
-import HelloComponent from '../../components/HelloComponent';
 
 import { Container } from './styles';
 
