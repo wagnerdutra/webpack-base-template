@@ -12,7 +12,22 @@ module.exports = merge(common, {
     chunkFilename: '[name].[chunkhash:4].bundle.js'
   },
   module: {
-    rules: []
+    rules: [
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10 * 1024,
+          fallback: 'file-loader',
+          name: 'images/[name].[hash:4].[ext]'
+        }
+      },
+      {
+        test: /\.(jpg|png|gif|svg)$/,
+        loader: 'image-webpack-loader',
+        enforce: 'pre'
+      }
+    ]
   },
   plugins: [
     new CleanWebpackPlugin(),

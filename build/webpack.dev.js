@@ -11,7 +11,17 @@ module.exports = merge(common, {
     chunkFilename: '[name].js'
   },
   module: {
-    rules: []
+    rules: [
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10 * 1024,
+          fallback: 'file-loader',
+          name: 'images/[name].[ext]'
+        }
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({

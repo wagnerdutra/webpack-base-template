@@ -18,6 +18,14 @@ module.exports = {
       {
         test: /\.s?css$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-url-loader',
+        options: {
+          limit: 10 * 1024,
+          noquotes: true
+        }
       }
     ]
   },
@@ -31,6 +39,7 @@ module.exports = {
     alias: {
       Components: path.resolve(__dirname, '../src/components/'),
       Pages: path.resolve(__dirname, '../src/pages/'),
+      Assets: path.resolve(__dirname, '../src/assets/'),
       Services: path.resolve(__dirname, '../src/services/'),
       Store: path.resolve(__dirname, '../src/store/'),
       Root: path.resolve(__dirname, '../src/')
