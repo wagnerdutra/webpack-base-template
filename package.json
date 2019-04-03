@@ -8,7 +8,7 @@
     "webpackConfig": "./build/webpack.common.js"
   },
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config build/webpack.prod.js",
     "start": "webpack-dev-server --inline --progress --config build/webpack.dev.js",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -29,6 +29,7 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
@@ -42,7 +43,7 @@
     "eslint": "^5.15.3",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.1.0",
-    "eslint-import-resolver-webpack": "^0.11.0",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",

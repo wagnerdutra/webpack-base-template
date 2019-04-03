@@ -22,10 +22,16 @@ module.exports = {
       }
     ]
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  },
   plugins: [new webpack.ProgressPlugin()],
   resolve: {
     alias: {
       Components: path.resolve(__dirname, '../src/components/'),
+      Pages: path.resolve(__dirname, '../src/pages/'),
       Services: path.resolve(__dirname, '../src/services/'),
       Store: path.resolve(__dirname, '../src/store/'),
       Root: path.resolve(__dirname, '../src/')

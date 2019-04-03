@@ -1,16 +1,16 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
-import HelloComponent from '../../components/HelloComponent';
+import HelloComponent from 'Components/HelloComponent';
 
 describe('HelloComponent', () => {
   it('should render loading correctly', () => {
-    const wrapper = mount(<HelloComponent text="" userName="" loading />);
+    const wrapper = shallow(<HelloComponent text="" userName="" loading />);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render component redux props correctly', () => {
-    const wrapper = mount(<HelloComponent text="Olá" userName="Wagner" loading={false} />);
+  it('should render component props correctly', () => {
+    const wrapper = shallow(<HelloComponent text="Olá" userName="Wagner" loading={false} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

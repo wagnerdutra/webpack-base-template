@@ -26,5 +26,19 @@
     "react/destructuring-assignment": 0,
     "import/prefer-default-export": 0,
     "no-unused-vars": 1
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["Components", "./src/components/"],
+          ["Pages", "./src/pages/"],
+          ["Services", "./src/services/"],
+          ["Store", "./src/store/"],
+          ["Root", "./src/"]
+        ],
+        "extensions": [".ts", ".js", ".jsx", ".json"]
+      }
+    }
   }
 }

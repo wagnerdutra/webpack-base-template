@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Welcome from '../pages/welcome';
+
+const Welcome = lazy(() => import(/* webpackChunkName: "welcome-page" */ 'Pages/welcome'));
 
 const routes = () => (
-  <Switch>
-    <Route path="/" component={Welcome} exact />
-  </Switch>
+  <Suspense fallback={<div>Loading...</div>}>
+    <Switch>
+      <Route path="/" component={Welcome} exact />
+    </Switch>
+  </Suspense>
 );
 
 export default routes;

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import HelloComponent from 'Components/HelloComponent'; //eslint-disable-line
+import HelloComponent from 'Components/HelloComponent';
 
 import PropTypes from 'prop-types';
 

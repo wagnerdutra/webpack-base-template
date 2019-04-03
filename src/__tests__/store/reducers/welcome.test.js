@@ -1,7 +1,7 @@
 import reducer, {
   Creators as WelcomeActions,
   INITIAL_STATE as initialState
-} from '../../store/ducks/welcome';
+} from 'Store/ducks/welcome';
 
 describe('Welcome Reducer', () => {
   it('should be equal to initial state', () => {

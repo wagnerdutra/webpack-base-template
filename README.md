@@ -4,4 +4,5 @@ Template base para webpack.
 
 TODO
 
-- Criar Testes iniciais
+- Criar Testes Action
+- Adicionar plugins e loaders essenciais para webpack \*verificar mini-css-extract-plugin
