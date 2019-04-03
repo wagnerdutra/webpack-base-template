@@ -1,8 +1,11 @@
-Template base para webpack.
+Template React App.
 
-- Em andamento.
+Setup
 
-TODO
-
-- Criar Testes Action
-- Adicionar plugins e loaders essenciais para webpack \*verificar mini-css-extract-plugin
+-Redux
+-Redux Saga
+-React Router
+-Jest and Enzyme
+-Axios
+-Styled Components
+-Webpack 4 base configuration
