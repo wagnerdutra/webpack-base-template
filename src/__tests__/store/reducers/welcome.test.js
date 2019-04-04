@@ -4,27 +4,27 @@ import reducer, {
 } from 'Store/ducks/welcome';
 
 describe('Welcome Reducer', () => {
-  it('should be equal to initial state', () => {
+  it('should return the initial state', () => {
     const state = reducer(undefined, {});
     expect(state).toEqual(initialState);
   });
 
-  it('state should be the same passed', () => {
+  it('should return the same state passed', () => {
     const state = reducer(initialState, {});
     expect(state).toEqual(initialState);
   });
 
-  it('should have the text passed', () => {
+  it('should handle SET_TEXT', () => {
     const state = reducer(initialState, WelcomeActions.setText('Wagner'));
     expect(state).toEqual({ ...initialState, text: 'Wagner' });
   });
 
-  it('should set loading true', () => {
+  it('should handle GET_USER_GIT', () => {
     const state = reducer(initialState, WelcomeActions.getUserGit());
     expect(state).toEqual({ ...initialState, loading: true });
   });
 
-  it('should set username and turn off the error and loading', () => {
+  it('should handle SET_USER_GIT', () => {
     const state = reducer(initialState, WelcomeActions.setUserGit('wagnerdutra'));
     expect(state).toEqual({
       ...initialState,
@@ -34,7 +34,7 @@ describe('Welcome Reducer', () => {
     });
   });
 
-  it('should set error on failure', () => {
+  it('should handle SET_USER_FAILURE', () => {
     const state = reducer(initialState, WelcomeActions.setUserGitFailure());
     expect(state).toEqual({ ...initialState, error: true, loading: false });
   });
