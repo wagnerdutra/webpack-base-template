@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: path.join(__dirname, '../src', 'index.js'),
@@ -34,7 +35,7 @@ module.exports = {
       chunks: 'all'
     }
   },
-  plugins: [],
+  plugins: [new webpack.ProgressPlugin()],
   resolve: {
     alias: {
       Components: path.resolve(__dirname, '../src/components/'),
