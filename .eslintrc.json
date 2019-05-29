@@ -19,15 +19,16 @@
   },
   "plugins": ["react", "react-hooks"],
   "rules": {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
     "prettier/prettier": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-underscore-dangle": 0,
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "react/destructuring-assignment": 0,
     "import/prefer-default-export": 0,
-    "no-unused-vars": 1
+    "no-unused-vars": 1,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": 0,
+    "react/no-multi-comp": 0
   },
   "settings": {
     "import/resolver": {

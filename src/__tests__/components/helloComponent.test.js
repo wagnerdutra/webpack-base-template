@@ -1,16 +1,16 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from 'react-testing-library';
 
 import HelloComponent from 'Components/HelloComponent';
 
 describe('HelloComponent', () => {
   it('should render loading correctly', () => {
-    const wrapper = shallow(<HelloComponent text="" userName="" loading />);
-    expect(wrapper).toMatchSnapshot();
+    const { container } = render(<HelloComponent text="" userName="" loading />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   it('should render component props correctly', () => {
-    const wrapper = shallow(<HelloComponent text="Olá" userName="Wagner" loading={false} />);
-    expect(wrapper).toMatchSnapshot();
+    const container = render(<HelloComponent text="Olá" userName="Wagner" loading={false} />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
