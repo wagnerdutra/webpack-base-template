@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
+    /* Deixa a font no chrome ou no safari mais detalhadas */
   }
 
 `;
