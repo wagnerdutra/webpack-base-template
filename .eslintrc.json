@@ -27,6 +27,7 @@
     "import/prefer-default-export": 0,
     "no-unused-vars": 1,
     "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "react/no-multi-comp": 0
   },
   "settings": {
